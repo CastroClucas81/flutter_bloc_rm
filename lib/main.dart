@@ -4,7 +4,7 @@ import 'package:flutter_bloc_rm/bloc/counter/counter_bloc.dart';
 import 'package:flutter_bloc_rm/bloc/home/home_bloc.dart';
 import 'package:flutter_bloc_rm/bloc/home/home_event.dart';
 import 'package:flutter_bloc_rm/pages/counter_page.dart';
-import 'package:flutter_bloc_rm/pages/home_page.dart';
+//https://www.youtube.com/watch?v=NqUx-NfTts4&ab_channel=Flutterly
 
 void main() {
   runApp(MyApp());

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_bloc_rm/bloc/counter/counter_bloc.dart';
 import 'package:flutter_bloc_rm/bloc/counter/counter_event.dart';
+import 'package:flutter_bloc_rm/bloc/counter/counter_state.dart';
 import 'package:flutter_bloc_rm/pages/teste_page.dart';
 
 class CounterPage extends StatelessWidget {
@@ -23,11 +24,11 @@ class CounterPage extends StatelessWidget {
                 },
                 child: Text("Decrementar"),
               ),
-              BlocBuilder<CounterBloc, int>(
+              BlocBuilder<CounterBloc, CounterState>(
                 bloc: _counterBloc,
                 builder: (context, state) {
                   return Text(
-                    state.toString(),
+                    state.counter.toString()
                   );
                 },
               ),

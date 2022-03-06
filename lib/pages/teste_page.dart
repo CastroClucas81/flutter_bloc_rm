@@ -11,7 +11,7 @@ class TestePage extends StatelessWidget {
 
     return Scaffold(
       body: Container(
-        child: Text(_counterBloc.state.toString()),
+        child: Text(_counterBloc.state.counter.toString()),
       ),
     );
   }
