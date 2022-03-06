@@ -1,10 +1,11 @@
-import 'package:equatable/equatable.dart';
-
-class NavigatorState extends Equatable {
-  @override
-  List<Object?> get props => [];
+enum EnumPages {
+  counterPage,
+  homePage,
+  testePage,
 }
 
-class CounterPageState extends NavigatorState {}
+class NavigatorState {
+  final EnumPages page;
 
-class HomePageState extends NavigatorState {}
+  NavigatorState({required this.page});
+}

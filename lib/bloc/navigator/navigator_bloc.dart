@@ -3,16 +3,16 @@ import 'package:flutter_bloc_rm/bloc/navigator/navigator_event.dart';
 import 'package:flutter_bloc_rm/bloc/navigator/navigator_state.dart';
 
 class NavigatorBloc extends Bloc<NavigatorEvent, NavigatorState> {
-  NavigatorBloc() : super(HomePageState());
+  NavigatorBloc() : super(NavigatorState(page: EnumPages.homePage));
 
   @override
   Stream<NavigatorState> mapEventToState(NavigatorEvent event) async* {
     switch (event.runtimeType) {
       case ChangeToCounterPageEvent:
-        yield CounterPageState();
+        yield NavigatorState(page: EnumPages.counterPage);
         break;
-      case ChangeToCounterPageEvent:
-        yield HomePageState();
+      case ChangeToHomePageEvent:
+        yield NavigatorState(page: EnumPages.homePage);
         break;
       default:
     }
