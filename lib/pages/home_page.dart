@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_bloc_rm/bloc/home/home_bloc.dart';
+import 'package:flutter_bloc_rm/bloc/home/home_event.dart';
 import 'package:flutter_bloc_rm/bloc/home/home_state.dart';
 
 class HomePage extends StatelessWidget {
@@ -19,7 +20,13 @@ class HomePage extends StatelessWidget {
         builder: (context, state) {
           if (state is HomeLoadingState) {
             return Center(
-              child: CircularProgressIndicator(),
+              // CircularProgressIndicator();
+              child: TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/counterPage');
+                },
+                child: Text("clique aqui"),
+              ),
             );
           }
 
